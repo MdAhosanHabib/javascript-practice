@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body>
+    
+        <section class="content">
+        
+            <div class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </div>
+            <div class="maincontent">
+            <script>
+                var color = "green";
+                
+                function functionone(){
+                var color = "red";
+                //if we want to use the variable as global, just we remove the var keyword, then it is acces in globaly;
+                document.write("inside function: "+color);
+                }
+                
+                functionone();
+                document.write("<br/>");
+                document.write("outside function :"+color);
+                
+            </script>
+            </div>
+            <div class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </div>
+        
+        </section>
+    
+    </body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body onload="alert()">
+    
+        <section class="content">
+            
+            <header class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </header>
+        
+            <section class="maincontent">
+             <form method="post" name="myform" onsubmit="return validateForm();" >
+               <table>
+                   <tr>
+                        <td>Name</td>
+                        <td><input type="text" name="name" /></td>
+                   </tr>
+                   <tr>
+                        <td>Email</td>
+                        <td><input type="text" name="email" /></td>
+                   </tr>
+                   <tr>
+                        <td>Telephone</td>
+                        <td>
+                        <input type="text" name="telephone" /><br/>
+                        <input type="checkbox" name="notcall" onclick="enabledisable(this)" />Please do not call me.
+                        </td>
+                   </tr>
+                   <tr>
+                        <td>What can we help you with?</td>
+                        <td>
+                            <select name="subject">
+                            <option>Select one</option>
+                            <option>Customer Service</option>
+                            <option>Question</option>
+                            <option>Comments</option>
+                            <option>Others</option>
+                            </select>
+                        </td>
+                   </tr>
+                   <tr>
+                        <td>Comment</td>
+                        <td><input type="text" name="comment" /></td>
+                   </tr>
+                   <tr>
+                        <td></td>
+                        <td>
+                        <input type="submit" name="submit" value="Submit" />
+                        <input type="reset" name="reset" value="Refresh" />
+                        </td>
+                   </tr>
+                   <tr>
+                        <td></td>
+                        <td>
+                        <div id="state" ></div>
+                        </td>
+                   </tr>
+               </table>
+            </form>   
+            <script type="text/javascript">
+               
+                  function validateForm(){
+                      var name      = document.myform.name;
+                      var email     = document.myform.email;
+                      var telephone = document.myform.telephone;
+                      var notcall   = document.myform.notcall;
+                      var subject   = document.myform.subject;
+                      var comment   = document.myform.comment;
+                      
+                      if(name.value == ""){
+                          document.getElementById("state").innerHTML = "Please enter your name";
+                          return false;
+                         }
+                      if(email.value == ""){
+                          document.getElementById("state").innerHTML = "Please enter your email";
+                          return false;
+                         }
+                      if(email.value.indexOf("@",0)<0){
+                          document.getElementById("state").innerHTML = "Please enter valid email address";
+                          return false;
+                         }
+                      if(email.value.indexOf(".",0)<0){
+                          document.getElementById("state").innerHTML = "Please enter valid email address";
+                          return false;
+                         }
+                      if(telephone.value == "" && notcall.checked == false){
+                          document.getElementById("state").innerHTML = "Please enter your phone number";
+                          return false;
+                         }
+                      if(subject.selectedIndex <1 ){
+                          document.getElementById("state").innerHTML = "Please tell us how we can help you";
+                          return false;
+                         }
+                      if(comment.value == ""){
+                          document.getElementById("state").innerHTML = "Please put a comment";
+                          return false;
+                         }
+                  }
+                function enabledisable(chkbox){
+                    if(chkbox.checked){
+                    document.myform.telephone.disabled = true;
+                       }
+                       else{
+                       document.myform.telephone.disabled = false;
+                       }
+                }
+                
+            </script>
+                
+            </section>
+            <footer class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </footer>
+        
+        </section>
+    
+    </body>
+
+</html>

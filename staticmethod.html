@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body onload="alert()">
+    
+        <section class="content">
+            
+            <header class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </header>
+            <section class="maincontent">
+                
+            <script>
+                
+              function totalnum(){
+                  this.x = 20;
+                  this.total = function(){
+                      return this.x + this.x;
+                  }
+              }
+                totalnum.prototype.a = 200;
+                totalnum.b = 800;
+                totalnum.c = function(){
+                    
+                }
+                var tn = new totalnum();
+                console.log(tn.a);
+                
+            </script>
+            </section>
+            <footer class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </footer>
+        
+        </section>
+    
+    </body>
+
+</html>

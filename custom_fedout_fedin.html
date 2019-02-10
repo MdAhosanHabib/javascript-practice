@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body onload="alert()">
+    
+        <section class="content">
+            
+            <header class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </header>
+            <section class="maincontent">
+                <div>
+                    
+                    <button onclick="fedOut()" >start</button>
+                    <img class="img" src="rakib1.jpg" id="image" />
+                
+                </div>
+            <script type="text/javascript">
+                
+                var element = document.getElementById("image");
+                
+                var duration = 1000;
+                var hidetime = 1000;
+                var showtime = 1000;
+                
+                function setOpacity(value){
+                    element.style.opacity = value;
+                }
+                
+                function fedOut(){
+                    for(i=0;i<=1;i+=0.01){
+                        setTimeout("setOpacity("+(1-i)+")", i*duration);
+                    }
+                    setTimeout("fedIn()",(duration+hidetime));
+                }
+                
+                function fedIn(){
+                    for(i=0;i<=1;i+=0.01){
+                        setTimeout("setOpacity("+i+")", i*duration)
+                    }
+                    setTimeout("fedOut()",(duration+showtime));
+                }
+            </script>
+            </section>
+            <footer class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </footer>
+        
+        </section>
+    
+    </body>
+
+</html>

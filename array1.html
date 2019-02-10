@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body>
+    
+        <section class="content">
+            
+            <div class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </div>
+            <div class="maincontent">
+            <script>
+                
+               /* var arr1 = [2, 4, 7, 3, 9];
+                var arr2 = [4, 5, 2, 5 ,2];
+                var addarr = arr1.concat(arr2);
+                document.write(addarr); */
+                
+              /*  var arr = ["green", "red", "purple", "blue", "yollow"];
+                document.write("Before sorting: "+arr+"<br/>");
+                arr.sort();
+                document.write("After sorting: "+arr); */
+                
+                var num = [32, 86, 45, 123, 233, 54];
+                document.write("Before sorting: "+num+"<br/>");
+                
+                function arrsort(x,y){
+                    
+                    return(x-y); //when we want to sort disending order ,just ultarnet the x and y possition
+                }
+                
+                num.sort(arrsort);
+                document.write("After sorting: "+num);
+                
+            </script>
+            </div>
+            <div class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </div>
+        
+        </section>
+    
+    </body>
+
+</html>

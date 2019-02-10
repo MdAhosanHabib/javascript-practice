@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body onload="alert()">
+    
+        <section class="content">
+            
+            <header class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </header>
+            <section class="maincontent">
+                
+               <table>
+                   
+                   <tr>
+                   <td>Your input</td>
+                   <td><input type="text" id="getvalue" /></td>
+                   </tr>
+                   
+                   <tr>
+                   <td></td>
+                   <td><input type="button" value="check" onclick="getnumber()" /></td>
+                   </tr>
+                   
+                   <tr>  
+                   <td>Result</td>
+                   <td><textarea id="showvalue"></textarea></td>
+                   </tr>
+               </table>
+                
+            <script type="text/javascript">
+                /* Mango-82 banana-980 apple-9908
+                802ABC973XYZ68
+                $1 $2 $983 ABC(200)
+                */
+                
+                function getnumber(){
+                    
+                    document.getElementById("showvalue").value = ""
+                    
+                    var getstr = document.getElementById("getvalue").value;
+                    var result = getstr.match(/\d+/g);
+                    
+                    if(result != null){
+                        
+                    for(var i=0; i<result.length; i++)
+                    {
+                        document.getElementById("showvalue").value += result[i]+"\n";
+                    }
+                        
+                  }
+                    
+                }
+                
+            </script>
+                
+            </section>
+            <footer class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </footer>
+        
+        </section>
+    
+    </body>
+
+</html>

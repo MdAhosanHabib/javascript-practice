@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body onload="alert()">
+    
+        <section class="content">
+            
+            <header class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </header>
+            <section class="maincontent">
+                <div id="ahosan">function by this</div>
+                <hr/>
+            <script>
+               
+               function livep(){
+                   
+                    var a = 200;
+                    this.x = 300;
+                    this.y = 400;
+                    this.z = function(){
+                       return this.x + this.y;
+                   }
+                   
+               }
+                var lp = new livep();
+                document.write(lp.z());
+                
+            </script>
+            </section>
+            <footer class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </footer>
+        
+        </section>
+    
+    </body>
+
+</html>

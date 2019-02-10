@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body onload="alert()">
+    
+        <section class="content">
+            
+            <header class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </header>
+            <section class="maincontent">
+               
+            <script type="text/javascript">
+               //5!
+                var num = prompt("find the number of: ");
+                function factorial(n){
+                    if(n==0){
+                       return 1;
+                       }
+                       else{
+                         /*  product = 1;
+                       for(i=1;i<=n;i++){
+                           product *= i;
+                       }
+                           return product;  */
+                           
+                           return n*factorial(n-1);
+                       }
+                }
+                document.write(factorial(num));
+                
+            </script>
+                
+            </section>
+            <footer class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </footer>
+        
+        </section>
+    
+    </body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body onload="alert()">
+    
+        <section class="content">
+            
+            <header class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </header>
+            <section class="maincontent">
+                
+            <script>
+                
+               function totallnum(a,b){
+                   
+                    this.x = a;
+                    this.y = b;
+                    this.sum = function(){
+                       return this.x + this.y;
+                   }
+                   this.pro = function(){
+                       return 30;
+                   }
+               }
+                
+                function productnum(a,b){
+                   
+                    this.x = a;
+                    this.y = b;
+                    this.pro = function(){
+                       return this.x * this.y;
+                   }
+                   
+               }
+                totallnum.prototype = new productnum;
+                
+                var tn = new totallnum(10,5);
+                tn.pro = function(){
+                       return 30000;
+                   }
+                document.write(tn.pro());
+                
+            </script>
+            </section>
+            <footer class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </footer>
+        
+        </section>
+    
+    </body>
+
+</html>

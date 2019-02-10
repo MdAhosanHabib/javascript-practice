@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body onload="alert()">
+    
+        <section class="content">
+            
+            <header class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </header>
+        
+            <section class="maincontent">
+             <form action="" method="" name="myform" >   
+               <table>
+                   <tr>
+                   <td><input type="text" name="inputbox" value="" /></td>
+                   <td><input type="button" value="click" name="button" onclick="testresult(this.form)" /></td>
+                   </tr>
+               </table>
+            </form>   
+            <script type="text/javascript">
+               
+                    function testresult(form){
+                        var testform = form.inputbox.value;
+                        if(testform == ""){
+                           alert("please type something.....");
+                           }else{
+                           alert("you typed..."+testform);
+                           }
+                    }
+                
+            </script>
+                
+            </section>
+            <footer class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </footer>
+        
+        </section>
+    
+    </body>
+
+</html>

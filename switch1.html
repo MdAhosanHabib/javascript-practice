@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body>
+    
+        <section class="content">
+            
+            <div class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </div>
+            <div class="maincontent">
+                
+                <input id="codetest" type="text" />
+                <button onclick="codecheck()" >Check</button>
+                <div id = "show"></div>
+            <script>
+               
+                 function codecheck(){
+                     
+                     var txt;
+                     var coding = document.getElementById("codetest").value;
+                     
+                     switch(coding){
+                             
+                         case "java":
+                             txt = "i love java";
+                             break;
+                             
+                         case "php":
+                             txt = "php is nice";
+                             break;
+                             
+                         case "python":
+                             txt = "python is beautyfull";
+                             break;
+                             
+                        default :
+                             txt = "unknown";
+                     }
+                     document.getElementById("show").innerHTML = txt;
+                 }
+                
+            </script>
+            </div>
+            <div class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </div>
+        
+        </section>
+    
+    </body>
+
+</html>

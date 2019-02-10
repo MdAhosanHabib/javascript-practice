@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body onload="alert()">
+    
+        <section class="content">
+            
+            <header class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </header>
+            <section class="maincontent">
+                <button onclick="myreg()" >Replace</button>
+                <div id="show">My name is Rakib</div>
+            <script type="text/javascript">
+                
+             /*  function myreg(){
+                var str = "Ahosan Habib Rakib";
+                var re = str.search(/Habib/i);
+                   document.getElementById("show").innerHTML = re;
+                } */
+                
+                function myreg(){
+                var str = document.getElementById("show").innerHTML;
+                var input = str.replace("Rakib", "Ahosan Habib Rakib");
+                   document.getElementById("show").innerHTML = input;
+                }
+                
+            </script>
+                
+            </section>
+            <footer class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </footer>
+        
+        </section>
+    
+    </body>
+
+</html>

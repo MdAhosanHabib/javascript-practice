@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body onload="alert()">
+    
+        <section class="content">
+            
+            <header class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </header>
+            <section class="maincontent">
+                
+            <script>
+                
+                var countdown;
+                var countdownNumber;
+                
+                function countdowninit(){
+                    countdownNumber = 60;
+                    countdowntrigger();      
+                }
+                
+                function countdowntrigger(){
+                    
+                    if(countdownNumber > 0){
+                        countdownNumber-- ;
+                        document.getElementById("show").innerHTML = countdownNumber;
+                        
+                       if(countdownNumber > 0){
+                            countdown = setTimeout("countdowntrigger()", 1000);
+                        }
+                    }
+                }
+                function countdownclear(){
+                    clearTimeout(countdown);
+                    document.getElementById("show").innerHTML = "countdown has been stop";
+                }
+                
+            </script>
+                <div>
+                
+                    <input type="button" value="test countdown" onclick = "countdowninit()" />
+                    <input type="button" value="clear countdown" onclick = "countdownclear()" />
+                
+                </div>
+                <div id="show"></div>
+            </section>
+            <footer class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </footer>
+        
+        </section>
+    
+    </body>
+
+</html>

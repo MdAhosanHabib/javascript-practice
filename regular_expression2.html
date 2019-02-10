@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body onload="alert()">
+    
+        <section class="content">
+            
+            <header class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </header>
+            <section class="maincontent">
+                
+                <button onclick="myreg()" >Test Now</button>
+                <div id="str">My name is Rakib</div>
+                <div id="show"></div>
+                <div id="sho"></div>
+                
+            <script type="text/javascript">
+                
+                function myreg(){
+                    var rm = document.getElementById("str").innerHTML;
+                    document.getElementById("show").innerHTML = /R/.test(rm);
+                    document.getElementById("sho").innerHTML = /R/.exec(rm);
+                }
+             
+                
+            </script>
+                
+            </section>
+            <footer class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </footer>
+        
+        </section>
+    
+    </body>
+
+</html>

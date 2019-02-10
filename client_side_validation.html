@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    
+        <meta charset = "UTF-8">
+        <title>Javascript Fundamentals</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+    
+    </head>
+    
+    <body onload="alert()">
+    
+        <section class="content">
+            
+            <header class="header">
+                <h2><script>document.write("Javascript Fundamentals");</script></h2>
+            </header>
+            <section class="maincontent">
+                
+               <table>
+                   
+                   <tr>
+                   <td>Your Email:</td>
+                   <td><input type="text" id="getvalue" onkeyup="Emailcheck()" /></td>
+                   </tr>
+                   
+               </table>
+                
+            <script type="text/javascript">
+               
+                function Emailcheck(){
+                    
+                    var getmail = document.getElementById("getvalue");
+                    var mail = getmail.value;
+                    var emailrgex = /([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})/;
+                    
+                    getmail.style.color = "white";
+                if(emailrgex.test(mail)){
+                   getmail.style.backgroundColor = "green";
+                   }else{
+                   getmail.style.backgroundColor = "red";
+                   }
+                }
+                
+                    
+                
+            </script>
+                
+            </section>
+            <footer class="footer">
+            
+                <h2><script>document.write("www.ahosanbd.com");</script></h2>
+            
+            </footer>
+        
+        </section>
+    
+    </body>
+
+</html>
